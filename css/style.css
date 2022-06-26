@@ -396,7 +396,7 @@ label {
     justify-items: center;
     grid-row-gap: 23px;       
     grid-template-areas: "div div" "form iframe" ;  
-    background-color: #3757E6;    
+    background-color: #3757E6; 
 }
 
 .div__contacto {
