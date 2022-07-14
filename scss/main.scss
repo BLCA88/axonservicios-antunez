@@ -1,0 +1,15 @@
+@import "./utilidades/variables";
+@import "./utilidades/mixins";
+@import "./utilidades/functions";
+@import "./base/base";
+@import "./base/reset";
+@import "./base/typography";
+@import "./layout/header";
+@import "./layout/grid";
+@import "./layout/footer";
+@import "./layout/nav";
+@import "./pages/index";
+@import "./pages/nosotros";
+@import "./pages/servicios";
+@import "./pages/proyectos";
+@import "../scss/pages/contacto";

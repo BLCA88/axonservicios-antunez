@@ -1,0 +1,26 @@
+.header__div--nav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;                 
+}
+
+.nav__check{
+    display: none;
+}
+
+.menu__burguer {
+    display:none;
+}
+
+.nav__ul { 
+    display: flex;
+    flex-wrap: nowrap;   
+    list-style: none; 
+    margin-right: 90px;         
+}
+
+.nav__li {    
+    display: inline-block; 
+    font-size: large;
+    margin-right: 10px;          
+    padding-right: 10px;
+    padding-left: 10px;                 
+}

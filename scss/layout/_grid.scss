@@ -1,0 +1,52 @@
+/* --------<MAIN INDEX>-------- */
+.main__in {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas: "present" "servicios" "because";
+    justify-items: center;           
+}
+
+/* --------<MAIN NOSOTROS>-------- */
+.main__n {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px 400px 550px;
+    grid-template-areas: ". s1 . " "s2 logo s3 " ". s4 .";
+    column-gap: 30px;
+    row-gap: 30px;    
+    justify-items: center;    
+    align-content: flex-start;              
+    background-color: #3757E6;           
+}
+
+/* --------<MAIN SERVICIOS>-------- */
+.main__servicios {
+    display: grid;    
+    grid-template-columns: 1fr;
+    grid-template-rows: .8fr, repeat(3, 1fr);
+    justify-items: center;
+    grid-template-areas: "section" "section1" "section2" "section3";
+    background: linear-gradient(100deg, rgba(26, 40, 243, 0.705), rgba(224, 12, 118, 0.712) 78%);
+    background-size: 600% 400%;
+    animation: backgroundgradient 6s linear infinite;    
+}
+
+/* --------<MAIN PROYECTO>-------- */
+.main__proyecto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px 1fr 1fr;
+    grid-template-areas: ". titulo ." "slider slider slider";
+    justify-items: center;                   
+    background-color: #3757E6;   
+}
+
+/*--------<MAIN CONTACTO>--------*/
+.main__contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .5fr 100px;              
+    grid-template-areas: "div" "iframe";      
+    background-color: #3757E6; 
+}
