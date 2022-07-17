@@ -1,3 +1,13 @@
+/*---------------------<BODY>---------------------*/
+body {        
+    background-color: white;
+    display: grid; 
+    min-height: 100vh;   
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header" "main" "footer";       
+}
+
+
 /* --------<MAIN INDEX>-------- */
 .main__in {
     display: grid;
@@ -24,20 +34,17 @@
 .main__servicios {
     display: grid;    
     grid-template-columns: 1fr;
-    grid-template-rows: .8fr, repeat(3, 1fr);
+    grid-template-rows: .7fr repeat(3, 1fr);
     justify-items: center;
-    grid-template-areas: "section" "section1" "section2" "section3";
-    background: linear-gradient(100deg, rgba(26, 40, 243, 0.705), rgba(224, 12, 118, 0.712) 78%);
-    background-size: 600% 400%;
-    animation: backgroundgradient 6s linear infinite;    
+    grid-template-areas: "section" "section1" "section2" "section3";      
 }
 
 /* --------<MAIN PROYECTO>-------- */
 .main__proyecto {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 300px 1fr 1fr;
-    grid-template-areas: ". titulo ." "slider slider slider";
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 1fr;
+    grid-template-areas: "titulo" "slider";
     justify-items: center;                   
     background-color: #3757E6;   
 }

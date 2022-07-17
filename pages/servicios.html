@@ -51,12 +51,19 @@
 
     <main class="main__servicios">
         <section class="presentacion">
-            <h1 class="titulo__presentacion">Servicios Axón</h1>
-            <p class="parrafo__presentacion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias vitae accusantium earum ipsam exercitationem temporibus eligendi harum itaque, nemo architecto optio sapiente qui dolores, impedit quasi. Perferendis cumque expedita quidem officia rem sint eum tenetur explicabo! Corporis illum veritatis distinctio.</p>
+            <h1 class="titulo__presentacion">Servicios Axón</h1> 
+            <div class="container__imagen--titulo">                           
+                <div class="container__imagen--presentacion">
+                    <img src="../images/settings.svg" alt="persona en escalera por subir">
+                </div>
+                <div class="container__titulo--presentacion">                
+                    <p class="parrafo__presentacion">En esta seccion podras ver nuestros servicios y los tipos de trabajos que realizamos. Si tenes un proyecto en particular que quieras realizar podes escribirnos para consultarnos los detalles.</p>
+                </div>
+            </div>           
         </section>
-        <section class="section__service1">            
+        <section id="seccion1" class="section__service1">            
             <div class="container__article">
-                <article id="electricidadPlomeria" class="article">
+                <article class="article">
                     <div class="div__servicio">
                         <h2  class="section__serv--h2">Electricidad</h2>
                         <p class="parrafo__servicio">Para asegurar una optima
@@ -70,8 +77,8 @@
                                 <li class="li__servicio">Ingenieria, planos eléctricos.</li>
                                 <li class="li__servicio">Puesta a tierra y verificación</li>
                                 <li class="li__servicio">Instalacion, mantenimiento, reparación y armado de Tableros. </li>                                    
-                                <li class="li__servicio">Tendido electrico por bandeja, cañeria o conducto.</li>
-                                <li class="li__servicio">Instalacion de artefactos de iluminación.</li>                                
+                                <li class="li__servicio">Tendido electrico e instalacion de bandeja, cañeria o conducto.</li>
+                                <li class="li__servicio">Instalacion de artefactos de iluminación, extractores y motores trifasicos.</li>                                
                                 <li class="li__servicio">Mantenimiento o reparación de circuitos.</li>                                
                             </ul>
                         </div>
@@ -80,16 +87,17 @@
                 <article class="article">
                     <div class="div__servicio">
                         <h2 id="albañileria" class="section__serv--h2">Construcciones</h2>
-                        <p class="parrafo__servicio"> Cumplimos las normas establecidad para la construccion, trabajamos con el convenio de la Uocra, desde Arquitectos hasta obreros tenemos el equipo completo para que realices tu construccion sin inconvenientes.
+                        <p class="parrafo__servicio"> Cumplimos las normas establecidad para la construccion, trabajamos con el convenio de la UOCRA, desde Arquitectos hasta obreros tenemos el equipo completo para que realices tu construccion sin inconvenientes.
                         </p>
                         <div class="div__servicio2">                            
                             <label class="label" for="box2"><i class="bi-box-arrow-in-down-left"></i></label>
                             <input type="checkbox" id="box2" class="checkbox">
                             <ul id="seccion2" class="ul__servicio">                                
-                                <li class="li__servicio">Tableros</li>                                    
-                                <li class="li__servicio">Cañerias</li>
-                                <li class="li__servicio">Bandejas</li>
-                                <li class="li__servicio">Planos</li>
+                                <li class="li__servicio">Arquitectos, planos en general.</li>                                    
+                                <li class="li__servicio">Ingenieria, revision de suelos y estructuras.</li>
+                                <li class="li__servicio">Construccuiones en general zapatas, columnas, vigas.</li>
+                                <li class="li__servicio">Stell framing: Construcción de viviendas livianas y en seco.</li>
+                                <li class="li__servicio">Reparaciones de viviendas en general y mantenimiento.</li>                                
                             </ul>
                         </div>
                     </div>
@@ -101,16 +109,17 @@
                 <article class="article">
                     <div class="div__servicio">
                         <h2 id="plomeria" class="section__serv--h2">Plomeria</h2>
-                        <p class="parrafo__servicio">En proceso de reemplazo..
+                        <p class="parrafo__servicio">Trabajamos con todos los tipos de cañerias y accesorios de gas y agua. No dudes en consultarnos si tenes algun proyecto en particular.
                         </p>
                         <div class="div__servicio2">
                             <label class="label" for="box3"><i class="bi-box-arrow-in-down-left"></i></label>
                             <input type="checkbox" id="box3" class="checkbox">
                             <ul class="ul__servicio">
-                                <li class="li__servicio">Tableros</li>                                    
-                                <li class="li__servicio">Cañerias</li>
-                                <li class="li__servicio">Bandejas</li>
-                                <li class="li__servicio">Planos</li>
+                                <li class="li__servicio">Instalaciones, reparaciones y mantenimiento de cañerias de agua con termofusion AquaSystem.</li>                                    
+                                <li class="li__servicio">Instalaciones, reparaciones y mantenimiento de cañerias de gas con termofusion Sigas.</li>
+                                <li class="li__servicio">Termofusionado electrico.</li>
+                                <li class="li__servicio">Instalación de desague común y cloacal.</li>
+                                <li class="li__servicio">Reparaciones de cañerias hidrobronz cobre.</li>
                             </ul>
                         </div>
                     </div>
@@ -124,10 +133,11 @@
                             <label class="label" for="box4"><i class="bi-box-arrow-in-down-left"></i></label>
                             <input type="checkbox" id="box4" class="checkbox">
                             <ul id="seccion3" class="ul__servicio">                                
-                                <li class="li__servicio">Tableros</li>                                    
-                                <li class="li__servicio">Cañerias</li>
-                                <li class="li__servicio">Bandejas</li>
-                                <li class="li__servicio">Planos</li>
+                                <li class="li__servicio">Instalación, reparación y mantenimiento de aire acondicionado, torres de enfriamiento y centrales</li>                                    
+                                <li class="li__servicio">Detección de fugas con UV</li>
+                                <li class="li__servicio">Cargar de refrigerante con recuperador.</li>
+                                <li class="li__servicio">Vacio de circuito y limpieza de cañeria.</li>
+                                <li class="li__servicio">Trabajos especiales.</li>
                             </ul>
                         </div>
                     </div>
@@ -145,10 +155,12 @@
                             <label class="label" for="box5"><i class="bi-box-arrow-in-down-left"></i></label>
                             <input type="checkbox" id="box5" class="checkbox">
                             <ul class="ul__servicio">
-                                <li class="li__servicio">Tableros</li>                                    
-                                <li class="li__servicio">Cañerias</li>
-                                <li class="li__servicio">Bandejas</li>
-                                <li class="li__servicio">Planos</li>
+                                <li class="li__servicio">Cableado estructurado utp o fibra optica.</li>                                    
+                                <li class="li__servicio">Certificación en puestos de red en general.</li>
+                                <li class="li__servicio">Fusion de fibra optica.</li>
+                                <li class="li__servicio">Instalacion de routers y switch.</li>
+                                <li class="li__servicio">Topologia de red.</li>
+                                <li class="li__servicio">Instalación y mantenimiento de centrales telefonicas convencionales o IP.</li>
                             </ul>
                         </div>
                     </div>
@@ -156,15 +168,15 @@
                 <article class="article">
                     <div class="div__servicio">
                         <h2 id="controlacceso" class="section__serv--h2">Control de Acceso</h2>
-                        <p class="parrafo__servicio">Contamos con toda la gama de equipos biometricos para la administracion de la fuerza laboral. </p>
+                        <p class="parrafo__servicio">Contamos con toda la gama de equipos biometricos para la administracion de la fuerza laboral. Tambien trabajamos con molinetes de acceso peatonal y vehicular. </p>
                         <div class="div__servicio2">
                             <label class="label" for="box6"><i class="bi-box-arrow-in-down-left"></i></label>
                             <input type="checkbox" id="box6" class="checkbox">
                             <ul class="ul__servicio">                                
-                                <li class="li__servicio">Tableros</li>                                    
-                                <li class="li__servicio">Cañerias</li>
-                                <li class="li__servicio">Bandejas</li>
-                                <li class="li__servicio">Planos</li>
+                                <li class="li__servicio">Instalación y reparación de relojes asistencia biometricos.</li>                                    
+                                <li class="li__servicio">Instalacion y mantenimiento de controles de acceso peatonal y vehicular.</li>
+                                <li class="li__servicio">Instalación, reparación y mantenimiento de camaras, DVR y NVR.</li>
+                                <li class="li__servicio">Instalación, reaparación y mantenimiento de alarmas y centrales de incendio.</li>
                             </ul>
                         </div>
                     </div>

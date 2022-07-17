@@ -1,12 +1,3 @@
-/*---------------------<BODY>---------------------*/
-body {        
-    background-color: white;
-    display: grid; 
-    min-height: 100vh;   
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: "header" "main" "footer";       
-}
-
 /*---------------------<HEADER>-------------------*/
 header {
     grid-area: header;    
@@ -24,7 +15,6 @@ header {
 }
 
 /*---------------<REGLAS GENERALES>---------------*/
-
 a {    
     color: rgb(7, 6, 83);
     text-decoration: none;

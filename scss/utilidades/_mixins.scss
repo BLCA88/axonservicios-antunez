@@ -4,7 +4,19 @@
     align-items: center;    
 }
 
+@mixin flexColumBeetween {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 @mixin flexRowEvenly {
     display: flex;
     justify-content: space-evenly;    
+}
+
+@mixin flexRowCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }

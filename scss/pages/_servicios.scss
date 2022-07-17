@@ -1,23 +1,38 @@
 
 .presentacion {
     @include flexColumCenter;
-    width: 90%;
-    height: 280px;
-    margin-top: 50px;
-    text-align: center;
-    background-color: map-get($color, base );
-    box-shadow: inset 1px 1px 10px 4px rgba(83, 81, 81, 0.171);
+    column-gap: 35px;
+    grid-area: section;
+    width: 100%;
+    height: 570px;    
+    background-color: #3757E6;    
+    border-radius: 0% 0% 100% 80%;
+           
 }
-.titulo__presentacion {
-    font-family: $f-open;
-    font-weight: 600;
-    margin-top: 20px;    
+.container__imagen--titulo{
+    @include flexRowCenter
+}
+.container__imagen--presentacion {
+    width: 40%;
+}
+.container__titulo--presentacion {
+    @include flexColumCenter;
+    width: 35%;
+    margin-top: 100px;
+}
+.titulo__presentacion {    
+    font-family: $f-mont;
+    font-weight: 700;
+    font-size: 180%;
+    margin-top: 20px;
+    color: map-get($color, base);    
  }
  .parrafo__presentacion {
     font-family: $f-open;
     font-weight: 300;
-    margin-top: 20px;
-    width: 70%;
+    font-size: 150%;
+    margin-top: 30px;    
+    color: map-get($color, base);
  }
 
 .section__service1 {
@@ -25,23 +40,24 @@
     display: flex;        
     align-items: center;    
     width: 100%;
-    height: 500px;
-    z-index: 3;            
+    height: 100%;
+    z-index: 3;
+    background-color: map-get($color, base)            
 }
 
 .section__service2 {
     @extend .section__service1;
     grid-area: section2;
-    z-index: 2;    
+    z-index: 2;        
 }
 
-.section_service3 {
+.section__service3 {
     @extend .section__service1;
     grid-area: section3;
-    z-index: 1;    
+    z-index: 1;        
 }
 .container__article {
-    @include flexRowEvenly;
+    @include flexRowCenter;
     width: 100%;
     height: 80%;        
 }
@@ -50,27 +66,27 @@
     justify-content: center;      
     text-align: center;   
     width: 20%;
-    height: 100%;
-    background-color: map-get($color, base);
-    border: 1px solid rgba(95, 156, 247, 0.685);
-    box-shadow: 0px 0px 10px 4px rgba(71, 71, 207, 0.425);
-    backdrop-filter: blur(1px);
-    border-radius: 10px;           
+    height: 350px;
+    margin: 60px;                     
 }
 .div__servicio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95%;
-    height: 400px;     
+    width: 100%;
+    height: 100%;
+    background-color: #3757E6;
+    box-shadow: 0px 0px 10px 5px rgba(178, 178, 180, 0.514);
+    border-radius: 20px;
+         
 }
 .div__servicio2 {
-    position: relative;        
+    position: relative;            
 }
 .checkbox {
     display: none;
     &:checked + .ul__servicio {
-        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);        
     }
 }
 .ul__servicio {
@@ -93,12 +109,12 @@
 }
 .bi-box-arrow-in-down-left {    
     font-size: 150%;
-    color: map-get($color, primary);
+    color: map-get($color, base);
     cursor: pointer;           
 }
 .section__serv--h2 { 
     text-align: center;
-    color: map-get($color, primary);       
+    color: map-get($color, base);       
     font-size: 135%;
     margin: 30px;
 }
@@ -106,7 +122,7 @@
 .parrafo__servicio {
     font-family: $f-open;
     font-weight: 400;     
-    color: map-get($color, primary);
+    color: map-get($color, base);
     width: 100%;
     height: 60%;                         
     text-align: center;
