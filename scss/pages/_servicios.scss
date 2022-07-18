@@ -5,126 +5,114 @@
     grid-area: section;
     width: 100%;
     height: 570px;    
-    background-color: #3757E6;    
+    background-color: white;    
     border-radius: 0% 0% 100% 80%;
-           
+    .titulo__presentacion {    
+        font-family: $f-mont;
+        font-weight: 700;
+        font-size: 180%;
+        margin-top: 20px;
+        color: map-get($color, second);    
+    }
+     .container__imagen--titulo{
+        @include flexRowCenter;
+        .container__imagen--presentacion {
+            width: 40%;            
+        }
+    }           
 }
-.container__imagen--titulo{
-    @include flexRowCenter
-}
-.container__imagen--presentacion {
-    width: 40%;
-}
+
 .container__titulo--presentacion {
     @include flexColumCenter;
     width: 35%;
-    margin-top: 100px;
+    .parrafo__presentacion {
+        font-family: $f-open;
+        font-weight: 300;
+        font-size: 150%;        
+        color: map-get($color, second);
+     }    
 }
-.titulo__presentacion {    
-    font-family: $f-mont;
-    font-weight: 700;
-    font-size: 180%;
-    margin-top: 20px;
-    color: map-get($color, base);    
- }
- .parrafo__presentacion {
-    font-family: $f-open;
-    font-weight: 300;
-    font-size: 150%;
-    margin-top: 30px;    
-    color: map-get($color, base);
- }
 
-.section__service1 {
+.seccion__servicios--electricidad {
+    @include flexRowEvenly;
     grid-area: section1;
-    display: flex;        
-    align-items: center;    
     width: 100%;
-    height: 100%;
-    z-index: 3;
-    background-color: map-get($color, base)            
-}
+    color: map-get($color, base);
+    
+    .articulo__servicios { 
+        @include flexColumCenter;
+        justify-content: space-evenly;                       
+        text-align: center;                 
+        width: 50%;
+        height: 50%;
+        margin-top: 120px;
+        
+        .h2__articulo {        
+            text-align: center;
+            width: 100%;               
+            font-size: 30px;
+            margin: 30px;        
+        }
+        .parrafo__articulo {        
+            font-family: $f-open;
+            font-weight: 400;
+            font-size: 25px;                
+            width: 100%;
+            height: 80%;                                 
+            text-align: center;        
+        }        
+    }    
+    .items__card {
+        @include flexColumCenter;             
+        text-align: left;   
+        width: 25%;
+        height: 75%;        
+        background-color: white;
+        color: map-get($color, second);
+        margin-top: 45px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;        
+        .titulo__items--card {
+            font-family: $f-open;
+            font-weight: 800;
+            font-size: 18px;
+            margin: 20px;
+        }
+        .ul__servicio {
+            width: 80%;            
+            .li__servicio {                
+                padding: 10px;
+                list-style: square;
+                font-size: 16px;
+            }
+        }
+        
 
-.section__service2 {
-    @extend .section__service1;
-    grid-area: section2;
-    z-index: 2;        
-}
-
-.section__service3 {
-    @extend .section__service1;
-    grid-area: section3;
-    z-index: 1;        
-}
-.container__article {
-    @include flexRowCenter;
-    width: 100%;
-    height: 80%;        
-}
-.article {
-    display: flex;
-    justify-content: center;      
-    text-align: center;   
-    width: 20%;
-    height: 350px;
-    margin: 60px;                     
-}
-.div__servicio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: #3757E6;
-    box-shadow: 0px 0px 10px 5px rgba(178, 178, 180, 0.514);
-    border-radius: 20px;
-         
-}
-.div__servicio2 {
-    position: relative;            
-}
-.checkbox {
-    display: none;
-    &:checked + .ul__servicio {
-        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);        
     }
 }
-.ul__servicio {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;   
-    position: absolute;    
-    list-style: none;    
-    color:white;    
-    width: 300px;        
-    right: 35px;    
-    border-radius: 4px;             
-    background-color: black;
-    clip-path: polygon(100% 0, 0 0, 0 0%, 100% 0%);
-    transition: clip-path 0.5s ease;        
+.seccion__servicios--construcciones {
+    @extend .seccion__servicios--electricidad;
+    grid-area: section2;
 }
-.li__servicio {        
-    padding: 5px;
-    
+.seccion__servicios--plomeria {
+    @extend .seccion__servicios--electricidad;
+    grid-area: section3;
 }
-.bi-box-arrow-in-down-left {    
-    font-size: 150%;
-    color: map-get($color, base);
-    cursor: pointer;           
+.seccion__servicios--aire {
+    @extend .seccion__servicios--electricidad;
+    grid-area: section4;
 }
-.section__serv--h2 { 
-    text-align: center;
-    color: map-get($color, base);       
-    font-size: 135%;
-    margin: 30px;
+.seccion__servicios--redes {
+    @extend .seccion__servicios--electricidad;
+    grid-area: section5;
+}
+.seccion__servicios--control {
+    @extend .seccion__servicios--electricidad;
+    grid-area: section6;
 }
 
-.parrafo__servicio {
-    font-family: $f-open;
-    font-weight: 400;     
-    color: map-get($color, base);
-    width: 100%;
-    height: 60%;                         
-    text-align: center;
-    font-size: large;             
-}
+
+
+
+
+

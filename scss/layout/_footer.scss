@@ -1,17 +1,31 @@
-.footer__div--a {    
-    width: 200px;
-    display:flex;        
-    align-items: center;
-    justify-content: space-between;          
+
+
+.footer__div--a {
+    grid-area: links;
+    @include flexColumCenter;    
+    width: 100%;    
+    .bi {
+        color: black;
+        font-size: 30px;
+        margin: 20px;
+        transition: all, 0.3s;
+        &:hover{
+            color: #3757E6;
+            font-size: 40px;
+        } 
+    }         
+}
+.footer__direccion {
+    grid-area: direccion;
+    @include flexColumCenter;
+    width: 80%;
+    .h3__footer {
+        width: 50%;
+        text-align: center;
+    }
+    .ul__footer {
+        width: 50%;
+    }
 }
 
-.bi {
-    color: black;
-    font-size: 30px;
-    transition: all, 0.3s; 
-}
-
-.bi:hover { 
-    color: #3757E6;
-    font-size: 40px;        
-} 
+ 

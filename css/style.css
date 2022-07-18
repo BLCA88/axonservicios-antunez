@@ -42,14 +42,21 @@ label {
   font-size: 20px;
 }
 
-/*-------------------<FOOTER>---------------------*/
-footer {
-  width: 100%;
-  height: 100px;
-  background-color: #f8f8f8;
-  grid-area: footer;
-  display: flex;
-  justify-content: center;
+input[type=button] {
+  width: 150px;
+  font-family: "Montserrat", sans-serif;
+  height: 30px;
+  background-color: #3757E6;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-size: large;
+  margin-top: 40px;
+}
+
+input[type=button]:hover {
+  background-color: #203cb8;
 }
 
 * {
@@ -86,6 +93,17 @@ body {
   grid-template-areas: "header" "main" "footer";
 }
 
+/*-------------------<FOOTER>---------------------*/
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 0.3fr auto;
+  grid-template-areas: "direccion links";
+  width: 100%;
+  height: 140px;
+  background-color: #f8f8f8;
+}
+
 /* --------<MAIN INDEX>-------- */
 .main__in {
   display: grid;
@@ -93,6 +111,12 @@ body {
   grid-template-rows: auto 1fr auto auto;
   grid-template-areas: "present" "servicios" "because";
   justify-items: center;
+}
+@media (min-width: 768) and (max-width: 1024px) {
+  .main__in {
+    grid-template-rows: auto auto auto 200px;
+    row-gap: 20px;
+  }
 }
 
 /* --------<MAIN NOSOTROS>-------- */
@@ -107,14 +131,45 @@ body {
   align-content: flex-start;
   background-color: #3757E6;
 }
+@media (min-width: 601) and (max-width: 768px) {
+  .main__n {
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "s1" "s2" "s3" "s4";
+  }
+}
+@media (min-width: 1024) and (max-width: 1200x) {
+  .main__n {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "s1 s2" "s3 s4";
+  }
+}
 
 /* --------<MAIN SERVICIOS>-------- */
 .main__servicios {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.7fr repeat(3, 1fr);
+  grid-template-rows: 0.7fr repeat(6, 1fr);
   justify-items: center;
-  grid-template-areas: "section" "section1" "section2" "section3";
+  row-gap: 40px;
+  grid-template-areas: "section" "section1" "section2" "section3" "section4" "section5" "section6";
+  background-color: #3757E6;
+}
+@media (min-width: 601) and (max-width: 768px) {
+  .main__servicios {
+    grid-template-rows: 1px 400px 370px 360px 1px;
+  }
+}
+@media (min-width: 768) and (max-width: 1024px) {
+  .main__servicios {
+    grid-template-rows: 1px 500px 500px 500px 1px;
+  }
+}
+@media (min-width: 1024) and (max-width: 1200x) {
+  .main__servicios {
+    grid-template-rows: 1px 800px 650px 700px 1px;
+  }
 }
 
 /* --------<MAIN PROYECTO>-------- */
@@ -126,6 +181,20 @@ body {
   justify-items: center;
   background-color: #3757E6;
 }
+@media (min-width: 401) and (max-width: 600px) {
+  .main__proyecto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr 100px;
+    grid-template-areas: "titulo" "slider";
+  }
+}
+@media (min-width: 1024) and (max-width: 1200x) {
+  .main__proyecto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 1fr 100px;
+    grid-template-areas: "titulo" "slider";
+  }
+}
 
 /*--------<MAIN CONTACTO>--------*/
 .main__contacto {
@@ -135,23 +204,58 @@ body {
   grid-template-areas: "div" "iframe";
   background-color: #3757E6;
 }
+@media (min-width: 601) and (max-width: 768px) {
+  .main__contacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 50px;
+  }
+}
+@media (min-width: 768) and (max-width: 1024px) {
+  .main__contacto {
+    grid-template-columns: 10px 1fr 1fr 10px;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". div iframe .";
+    column-gap: 20px;
+  }
+}
+@media (min-width: 1024) and (max-width: 1200x) {
+  .main__contacto {
+    grid-template-rows: 1fr 0.5fr 50px;
+    column-gap: 25px;
+  }
+}
 
 .footer__div--a {
-  width: 200px;
+  grid-area: links;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
 }
-
-.bi {
+.footer__div--a .bi {
   color: black;
   font-size: 30px;
+  margin: 20px;
   transition: all, 0.3s;
 }
-
-.bi:hover {
+.footer__div--a .bi:hover {
   color: #3757E6;
   font-size: 40px;
+}
+
+.footer__direccion {
+  grid-area: direccion;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+.footer__direccion .h3__footer {
+  width: 50%;
+  text-align: center;
+}
+.footer__direccion .ul__footer {
+  width: 50%;
 }
 
 .header__div--nav {
@@ -182,10 +286,10 @@ body {
 }
 
 .conteiner__presentation {
-  grid-area: present;
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: present;
   width: 100%;
   height: 85vh;
   background: linear-gradient(100deg, rgba(0, 4, 255, 0.87), rgba(12, 224, 206, 0.89) 78%);
@@ -202,13 +306,10 @@ body {
   margin-right: 50px;
   margin-bottom: 100px;
 }
-.conteiner__presentation .presentation__h1 .image__box {
-  width: 27vw;
-  margin-right: 1rem;
-}
 
-strong {
-  font-style: italic;
+.image__box {
+  width: 30vw;
+  margin-right: 1rem;
 }
 
 @keyframes backgroundgradient {
@@ -232,12 +333,11 @@ strong {
   }
 }
 .services__section {
-  width: 100%;
-  grid-area: servicios;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  grid-area: servicios;
+  width: 100%;
   margin-top: 70px;
 }
 .services__section .title__section {
@@ -251,9 +351,9 @@ strong {
   width: 100%;
   background-color: white;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .services__section .conteiner__cards .card {
   display: flex;
@@ -285,28 +385,11 @@ strong {
   transform: scale(1.04, 1.04);
 }
 
-input[type=button] {
-  width: 150px;
-  font-family: "Montserrat", sans-serif;
-  height: 30px;
-  background-color: #3757E6;
-  color: white;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  font-size: large;
-  margin-top: 40px;
-}
-
-input[type=button]:hover {
-  background-color: #203cb8;
-}
-
 .because {
   grid-area: because;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   background-color: #3757E6;
   width: 100%;
   margin-top: 10px;
@@ -335,7 +418,6 @@ input[type=button]:hover {
   object-fit: contain;
 }
 .because .conteiner__because2 {
-  align-items: center;
   width: 50%;
 }
 .because .conteiner__because2 .title__because {
@@ -345,7 +427,6 @@ input[type=button]:hover {
   padding: 10px;
 }
 .because .conteiner__because2 .because__p {
-  box-sizing: content-box;
   width: 100%;
   font-weight: 100;
   text-align: center;
@@ -371,7 +452,7 @@ input[type=button]:hover {
   font-size: large;
 }
 .work .img__cv {
-  width: 20%;
+  width: 16%;
   margin: 40px;
 }
 
@@ -460,17 +541,22 @@ input[type=button]:hover {
   grid-area: section;
   width: 100%;
   height: 570px;
-  background-color: #3757E6;
+  background-color: white;
   border-radius: 0% 0% 100% 80%;
 }
-
-.container__imagen--titulo {
+.presentacion .titulo__presentacion {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 180%;
+  margin-top: 20px;
+  color: rgb(7, 6, 83);
+}
+.presentacion .container__imagen--titulo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.container__imagen--presentacion {
+.presentacion .container__imagen--titulo .container__imagen--presentacion {
   width: 40%;
 }
 
@@ -479,124 +565,91 @@ input[type=button]:hover {
   flex-direction: column;
   align-items: center;
   width: 35%;
-  margin-top: 100px;
 }
-
-.titulo__presentacion {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 180%;
-  margin-top: 20px;
-  color: white;
-}
-
-.parrafo__presentacion {
+.container__titulo--presentacion .parrafo__presentacion {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 150%;
-  margin-top: 30px;
-  color: white;
+  color: rgb(7, 6, 83);
 }
 
-.section__service1, .section__service3, .section__service2 {
+.seccion__servicios--electricidad, .seccion__servicios--control, .seccion__servicios--redes, .seccion__servicios--aire, .seccion__servicios--plomeria, .seccion__servicios--construcciones {
+  display: flex;
+  justify-content: space-evenly;
   grid-area: section1;
-  display: flex;
-  align-items: center;
   width: 100%;
-  height: 100%;
-  z-index: 3;
-  background-color: white;
+  color: white;
 }
-
-.section__service2 {
-  grid-area: section2;
-  z-index: 2;
-}
-
-.section__service3 {
-  grid-area: section3;
-  z-index: 1;
-}
-
-.container__article {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 80%;
-}
-
-.article {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  width: 20%;
-  height: 350px;
-  margin: 60px;
-}
-
-.div__servicio {
+.seccion__servicios--electricidad .articulo__servicios, .seccion__servicios--control .articulo__servicios, .seccion__servicios--redes .articulo__servicios, .seccion__servicios--aire .articulo__servicios, .seccion__servicios--plomeria .articulo__servicios, .seccion__servicios--construcciones .articulo__servicios {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: #3757E6;
-  box-shadow: 0px 0px 10px 5px rgba(178, 178, 180, 0.514);
-  border-radius: 20px;
-}
-
-.div__servicio2 {
-  position: relative;
-}
-
-.checkbox {
-  display: none;
-}
-.checkbox:checked + .ul__servicio {
-  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-}
-
-.ul__servicio {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  position: absolute;
-  list-style: none;
-  color: white;
-  width: 300px;
-  right: 35px;
-  border-radius: 4px;
-  background-color: black;
-  clip-path: polygon(100% 0, 0 0, 0 0%, 100% 0%);
-  transition: clip-path 0.5s ease;
-}
-
-.li__servicio {
-  padding: 5px;
-}
-
-.bi-box-arrow-in-down-left {
-  font-size: 150%;
-  color: white;
-  cursor: pointer;
-}
-
-.section__serv--h2 {
+  justify-content: space-evenly;
   text-align: center;
-  color: white;
-  font-size: 135%;
+  width: 50%;
+  height: 50%;
+  margin-top: 120px;
+}
+.seccion__servicios--electricidad .articulo__servicios .h2__articulo, .seccion__servicios--control .articulo__servicios .h2__articulo, .seccion__servicios--redes .articulo__servicios .h2__articulo, .seccion__servicios--aire .articulo__servicios .h2__articulo, .seccion__servicios--plomeria .articulo__servicios .h2__articulo, .seccion__servicios--construcciones .articulo__servicios .h2__articulo {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
   margin: 30px;
 }
-
-.parrafo__servicio {
+.seccion__servicios--electricidad .articulo__servicios .parrafo__articulo, .seccion__servicios--control .articulo__servicios .parrafo__articulo, .seccion__servicios--redes .articulo__servicios .parrafo__articulo, .seccion__servicios--aire .articulo__servicios .parrafo__articulo, .seccion__servicios--plomeria .articulo__servicios .parrafo__articulo, .seccion__servicios--construcciones .articulo__servicios .parrafo__articulo {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: white;
+  font-size: 25px;
   width: 100%;
-  height: 60%;
+  height: 80%;
   text-align: center;
-  font-size: large;
+}
+.seccion__servicios--electricidad .items__card, .seccion__servicios--control .items__card, .seccion__servicios--redes .items__card, .seccion__servicios--aire .items__card, .seccion__servicios--plomeria .items__card, .seccion__servicios--construcciones .items__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 25%;
+  height: 75%;
+  background-color: white;
+  color: rgb(7, 6, 83);
+  margin-top: 45px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+.seccion__servicios--electricidad .items__card .titulo__items--card, .seccion__servicios--control .items__card .titulo__items--card, .seccion__servicios--redes .items__card .titulo__items--card, .seccion__servicios--aire .items__card .titulo__items--card, .seccion__servicios--plomeria .items__card .titulo__items--card, .seccion__servicios--construcciones .items__card .titulo__items--card {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  margin: 20px;
+}
+.seccion__servicios--electricidad .items__card .ul__servicio, .seccion__servicios--control .items__card .ul__servicio, .seccion__servicios--redes .items__card .ul__servicio, .seccion__servicios--aire .items__card .ul__servicio, .seccion__servicios--plomeria .items__card .ul__servicio, .seccion__servicios--construcciones .items__card .ul__servicio {
+  width: 80%;
+}
+.seccion__servicios--electricidad .items__card .ul__servicio .li__servicio, .seccion__servicios--control .items__card .ul__servicio .li__servicio, .seccion__servicios--redes .items__card .ul__servicio .li__servicio, .seccion__servicios--aire .items__card .ul__servicio .li__servicio, .seccion__servicios--plomeria .items__card .ul__servicio .li__servicio, .seccion__servicios--construcciones .items__card .ul__servicio .li__servicio {
+  padding: 10px;
+  list-style: square;
+  font-size: 16px;
+}
+
+.seccion__servicios--construcciones {
+  grid-area: section2;
+}
+
+.seccion__servicios--plomeria {
+  grid-area: section3;
+}
+
+.seccion__servicios--aire {
+  grid-area: section4;
+}
+
+.seccion__servicios--redes {
+  grid-area: section5;
+}
+
+.seccion__servicios--control {
+  grid-area: section6;
 }
 
 .div__titulo {
@@ -722,6 +775,7 @@ form {
 }
 form .label__contacto {
   font-size: 25px;
+  padding-bottom: 5px;
 }
 form .input {
   background-color: white;
@@ -752,9 +806,9 @@ textarea {
 
 .div__ubicacion {
   display: flex;
-  grid-area: iframe;
   justify-content: center;
   align-items: center;
+  grid-area: iframe;
   width: 100%;
 }
 .div__ubicacion .iframe__contacto {
@@ -1040,7 +1094,7 @@ textarea {
   }
 }
 /*-----------------<BREACK 400PX a 600px>------------------*/
-@media (min-width: 400px) and (max-width: 600px) {
+@media (min-width: 401px) and (max-width: 600px) {
   /*--------<Header>--------*/
   .header__div--h1 {
     display: none;

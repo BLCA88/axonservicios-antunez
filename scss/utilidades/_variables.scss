@@ -11,4 +11,13 @@ $color:(
     'second':rgb(7, 6, 83),
     'base': white
 );
+
+$breakpoints: (
+    'xsmall': '(max-width: 400px)',
+    'small': '(min-width: 401) and (max-width: 600px)',
+    'medium': '(min-width: 601) and (max-width: 768px)',
+    'large': '(min-width: 768) and (max-width: 1024px)',
+    'xlarge': '(min-width: 1024) and (max-width: 1200x)'
+);
     
+

@@ -281,7 +281,7 @@
 }
 
 /*-----------------<BREACK 400PX a 600px>------------------*/
-@media (min-width: 400px) and (max-width: 600px) {
+@media (min-width: 401px) and (max-width: 600px) {
     /*--------<Header>--------*/
     .header__div--h1 {
         display: none;        
@@ -532,7 +532,7 @@
     /*--------<Main Contacto>------*/
     .main__contacto {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr .5fr 50px ;
+        grid-template-rows: 1fr .5fr 50px;
     }
     .div__contacto {
         justify-content: center;
@@ -789,9 +789,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr .5fr 50px;        
     }
-    .div__contacto {
-        
-    }        
+         
     .h2__contacto {        
         font-size: 185%;
     }
