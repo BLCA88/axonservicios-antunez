@@ -38,7 +38,7 @@
                         <a href="servicios.html">Servicios</a>
                     </li>
                     <li class="nav__li">
-                        <a href="proyectos.html">Proyectos</a>
+                        <a href="clientes.html">Clientes</a>
                     </li>
                     <li class="nav__li">
                         <a href="contacto.html">Contacto</a>
@@ -47,19 +47,17 @@
             </div>
         </nav>
     </header>
-    <main class="main__proyecto">
-        <div class="div__titulo">
-            <h2 class="h2__titulo">Nuestros proyectos</h2>
-            <p class="p__titulo">Te dejamos un repaso de los proyectos terminados y en desarrollo. Nuestros clientes avalan nuestro compromiso. No dudes en consultarnos por tu proyecto</p>
-        </div>
-        <div class="carrusel__principal">
-            <div class="div__empresas">
-                <ul class="ul__empresas">
-                    <li class="li__title">Metrovias</li>
-                    <li class="li__title">ZKTeco</li>
-                    <li class="li__title">Surrey</li>
-                </ul>           
-            </div>            
+    <main class="main__clientes">
+        <section class="seccion__clientes--presentacion">
+            <div class="container__titulo--clientes">
+                <h1 class="h2__titulo">Nuestros clientes</h1>
+                <p class="p__titulo">Te dejamos un repaso de los proyectos terminados y en desarrollo. Nuestros clientes avalan nuestro compromiso. No dudes en consultarnos por tu proyecto</p>
+            </div>
+            <div class="container__imagen--titulo">
+                <img src="../images/team.svg" alt="personas ayudandose">
+            </div>
+        </section>
+        <seccion class="seccion__empresas">                        
             <div class="div__carrusel">
                 <ul class="ul__img">
                     <li class="li__img"><img
@@ -91,15 +89,64 @@
                             alt="conducto de ventilacion"></li>
                 </ul>
             </div>
-        </div>
+        </seccion>
+        <section class="seccion__exito">            
+            <div class="container__exito">                
+                <input class="rel__imagen" type="radio" id="imagen1" aria-hidden="true" hidden="" checked="checked" name="slide">
+				<div class="contenido__carrucel">
+                    <aside class="aside__carrucel" >
+                        <p>HOLA</p>
+                    </aside>
+                    <img class="img__carrucel1" src="../images/cencosud.jpeg" alt="edificio cencosud">
+                </div>                
+				<input class="rel__imagen" type="radio" id="imagen2" aria-hidden="true" hidden="" name="slide">
+				<div class="contenido__carrucel">
+                    <aside class="aside__carrucel" >
+                        <p>COMO</p>
+                    </aside>
+                    <img class="img__carrucel2" src="../images/basf.jpg" alt="edificio basf">
+                </div> 
+				<input class="rel__imagen" type="radio" id="imagen3" aria-hidden="true" hidden="" name="slide">
+				<div class="contenido__carrucel">
+                    <aside class="aside__carrucel" >
+                        <p>ESTAS</p>
+                    </aside>
+                    <img class="img__carrucel3" src="../images/Dahua.webp" alt="oficina dahua">
+                </div> 				
+				<ol class="circle">
+                    <li>
+                        <label for="imagen1" class="indicador">•</label>
+                    </li>
+                    <li>
+                        <label for="imagen2" class="indicador">•</label>
+                    </li>
+                    <li>
+                        <label for="imagen3" class="indicador">•</label>
+                    </li>
+                </ol>               
+            </div>
+        </section>
     </main>
-    <footer>
+    <footer>       
         <div class="footer__div--a">
             <a href="https://ar.linkedin.com/"><i class="bi bi-linkedin"></i> </a>
-            <a href="https://es-la.facebook.com/"><i class="bi bi-facebook"></i></a>
+            <a href="https://es-la.facebook.com/"><i class="bi bi-facebook"></i></a> 
             <a href="https://github.com/"><i class="bi bi-github"></i></a>
-            <a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a>                       
         </div>
+        <div class="footer__direccion">
+            <h3 class="h3__footer">Axón</h3>
+            <div class="direccion__container">
+                <ul class="ul__footer">
+                    <li class="li__footer"><i class="bi bi-geo-alt-fill"></i>Av. Siempreviva 742, Castelar</li>
+                    <li class="li__footer"><i class="bi bi-telephone-fill"></i>+54 011 6018-2964</li>
+                    <li class="li__footer"><a href="mailto:axon3635@outlook.com"><i class="bi bi-envelope-fill"></i>axon3635@outlook.com</a></li>                                        
+                </ul>
+            </div>
+        </div>
+        <div class="ubicacion__footer">
+            <iframe class="iframe__ubicacion--footer" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14842.716915746068!2d-58.647269728137026!3d-34.653286683241824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb8aa7762bd43%3A0x3b271874eb632a7a!2sCastelar!5e0!3m2!1ses-419!2sar!4v1658158132033!5m2!1ses-419!2sar" width="300" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>                 
     </footer>
 
 </body>

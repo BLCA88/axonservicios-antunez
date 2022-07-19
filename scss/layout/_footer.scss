@@ -1,8 +1,6 @@
-
-
 .footer__div--a {
     grid-area: links;
-    @include flexColumCenter;    
+    @include flexRowCenter;    
     width: 100%;    
     .bi {
         color: black;
@@ -18,13 +16,41 @@
 .footer__direccion {
     grid-area: direccion;
     @include flexColumCenter;
-    width: 80%;
+    width: 100%;
+    margin-top: 20px;
     .h3__footer {
-        width: 50%;
+        width: 30%;
         text-align: center;
     }
-    .ul__footer {
-        width: 50%;
+    .direccion__container {        
+        text-align: center;
+        width: 100%;
+        .ul__footer {
+            width: 100%;
+            list-style: none;
+            .li__footer {
+                .bi {
+                    color: #3757E6;
+                    font-size: 20px;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }    
+}
+
+.ubicacion__footer {
+    @include flexRowCenter;
+    z-index: 1;        
+    .iframe__ubicacion--footer {
+        border-radius: 10px;
+        position: absolute;
+        transition: 0.4s;
+        &:hover {
+            width: 600px;
+            height: 300px;
+            transform: translate(-70px, -100px);
+        }        
     }
 }
 
