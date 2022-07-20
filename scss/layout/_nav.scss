@@ -3,7 +3,15 @@
 }
 
 .nav__check{
-    display: none;
+    display: none;    
+}
+.nav__check:checked + .nav__ul {
+    @include size (xsmall) {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    @include size (small) {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }    
 }
 
 .menu__burguer {
@@ -14,7 +22,37 @@
     display: flex;
     flex-wrap: nowrap;   
     list-style: none; 
-    margin-right: 90px;         
+    margin-right: 90px;
+    @include size (xsmall) {
+        height: 300px;
+        width: 100%;        
+        top: 90px;
+        right: 0.0px;        
+        background-color: #ece8e8e1;        
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        margin-right: 0.1px;
+        margin-top: 5px;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transition: clip-path 0.2s ease-in-out;        
+    }
+    @include size (small) {
+        height: 300px;
+        width: 100%;        
+        top: 90px;
+        right: 0.0px;        
+        background-color: #ece8e8e1;        
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        margin-right: 0.1px;
+        margin-top: 5px;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transition: clip-path 0.2s ease-in-out; 
+    }         
 }
 
 .nav__li {    
@@ -22,5 +60,27 @@
     font-size: large;
     margin-right: 10px;          
     padding-right: 10px;
-    padding-left: 10px;                 
+    padding-left: 10px;
+    @include size (xsmall) {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include size (small) {
+        display: flex;
+        justify-content: space-between;
+    }                 
+}
+.menu__burguer{
+    @include size (xsmall) {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+        margin-top: 40px;
+    }
+    @include size (small) {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+        margin-top: 40px;
+    }    
 }

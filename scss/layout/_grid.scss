@@ -3,7 +3,7 @@ body {
     background-color: white;
     display: grid; 
     min-height: 100vh;   
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas: "header" "main" "footer";       
 }
 
@@ -15,7 +15,11 @@ footer {
     grid-template-areas: "direccion links iframe";             
     width: 100%;
     height: 140px;           
-    background-color: #f8f8f8;       
+    background-color: #f8f8f8;
+    @include size (xsmall) {
+        grid-template-columns: auto auto;
+        grid-template-areas: "direccion links";
+    }           
 }
 
 
@@ -26,10 +30,22 @@ footer {
     grid-template-rows: auto 1fr auto auto;
     grid-template-areas: "present" "servicios" "because";
     justify-items: center;
-    @include size(xsmall); @include size(small); @include size(medium); @include size (large) {
+    @include size(xsmall) {
         grid-template-rows: auto auto auto 200px;
         row-gap: 20px;
-    };              
+    }
+    @include size(small) {
+        grid-template-rows: auto auto auto 200px;
+        row-gap: 20px;
+    }
+    @include size(medium) {
+        grid-template-rows: auto auto auto 200px;
+        row-gap: 20px;
+    }
+    @include size (large) {
+        grid-template-rows: auto auto auto 200px;
+        row-gap: 20px;
+    }              
 }
 
 /* --------<MAIN NOSOTROS>-------- */
@@ -79,22 +95,11 @@ footer {
 .main__clientes {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .4fr 1fr 1.3fr;
+    grid-template-rows: 1fr .3fr 1fr;
     grid-template-areas: "titulo" "slider" "carrusel";
     justify-items: center;
     align-items: center;                      
-    background-color: #3757E6;
-    @include size(xsmall); @include size(small)  {
-        grid-template-columns: 1fr;
-        grid-template-rows: 200px 1fr 100px;
-        grid-template-areas: "titulo" "slider";
-    };
-     
-    @include size(medium); @include size (large); @include size (xlarge) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 300px 1fr 100px;
-        grid-template-areas: "titulo" "slider";
-    };     
+    background-color: #3757E6;         
 }
 
 /*--------<MAIN CONTACTO>--------*/

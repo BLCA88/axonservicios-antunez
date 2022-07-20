@@ -1,12 +1,14 @@
 .seccion__clientes--presentacion {
   @include flexRowCenter;
   grid-area: titulo;
-  background-color: white;  
+  background-color: white;
+  height: 100%;  
   .container__titulo--clientes {
     @include flexColumCenter;
     width: 50%;    
     color: map-get($color, second);
-    text-align: center;    
+    text-align: center;
+    margin-bottom: 150px;    
     .h2__titulo {
       font-family: $f-mont;        
       font-size: 30px;
@@ -22,32 +24,38 @@
   }
   .container__imagen--titulo {
     width: 45%;
+    margin-bottom: 100px;
+    .img__titulo {
+      width: 95%;
+    }
   }
 }
 .seccion__empresas {
+  @include flexRowCenter;
   grid-area: slider;
   width: 100%;
-  height: 100%;  
-  overflow: hidden;
-  background-color: white;  
+  height: 100%; 
+  background-color: white;
+  overflow: hidden;       
   .div__carrusel {
-    .ul__img {
-      width: 80%;        
+    width: 90%;    
+    margin-top: 20px;
+    overflow: hidden;        
+    .ul__img {              
       display: flex;    
-      animation: carruse 10s infinite;
-      .li__img {
-        width: 600px;    
-        display: flex;    
-        border: 1px solid black;
-        box-shadow: 1px 2px 10px 2px black;            
+      animation: carrusel 10s infinite;      
+      .li__img {           
+        display: flex;        
+        .img__empresas {
+          width: 250px;
+          margin: 0px 45px 0px 45px;
+          filter: grayscale(100%);
+        }           
       }    
     }
   }    
 }
-img {
-  width: 100%;
-  object-fit: cover;              
-}
+
 
 @keyframes titulo {
   0% {
@@ -93,63 +101,52 @@ img {
 }
 
 .seccion__exito {
-  @include flexRowCenter;
+  @include flexColumCenter;
+  justify-content: center;
   width: 100%;
+  height: 100%; 
   box-shadow: rgba(0, 0, 0, 0.116) 0px 10px 7px 2px inset;
-  width: 70%;
-  height: 70%;    
-  .container__exito {
-    width: 90%;
-    height: 90%;
-    background-color: white;
+  .titulo__exito {
+    font-family: $f-albert;    
+    font-size: 32px;    
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin: 2rem;
+  }     
+  .container__exito {    
+    width: 800px;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
     overflow: hidden;
-    .rel__imagen:checked + .contenido__carrucel {
-      position: relative;
+    top: 40px;    
+    .rel__imagen:checked + .contenido__carrucel {      
       opacity: 100;
-    }
-    .circle{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      position: absolute;            
-      left: 0;
-      right: 0;
-      text-align: center;
-      z-index: 10;
-      & li {
-        display: inline-block;
-        margin: 0 5px;
-      }
-      .indicador {
-        color: #828282;
-        cursor: pointer;
-        display: block;
-        font-size: 35px;
-        &:hover {
-          color: #aaaaaa;
-        }
-      }
-    } 
-      
+    }      
     .contenido__carrucel {
       @include flexRowCenter;
-      width: 61%;
-      height: 60%;
-      position: absolute;
-      opacity: 0;
-      transition: opacity 0.6s ease;
-      
-      .aside__carrucel {
-        width: 30%;
-        height: 100%;        
-        background-color: red;
+      opacity: 0;           
+      display: flex;            
+      top: 0px;           
+      transition: opacity 0.6s ease;      
+      .parrafo__imagen {
+        font-family: $f-albert;
+        font-size: large;
+        position: absolute;        
+        z-index: 4;
+        width: 90%;
+        top: 300px;
+        background-color: rgba(27, 27, 27, 0.658);
+        color: white;
       }
-      .img__carrucel1 {
-        display: flex;        
-        width: 70%;
-        height: 100%;
+      .img__carrucel1 {                        
+        display: flex;                      
         z-index: 3;
-        object-fit: cover;        
+        position: absolute;
+        top: 0px;
+        width: 800px;
+        height: 450px;               
       }
       .img__carrucel2 {
         @extend .img__carrucel1;
@@ -157,8 +154,25 @@ img {
       }
       .img__carrucel3 {
         @extend .img__carrucel1;
-        z-index: 1;
-        
+        z-index: 1;        
+      }
+    }
+  }
+  .circle{
+    list-style: none;     
+    text-align: center;
+    margin: 40px;      
+    & li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+    .indicador {
+      color: rgb(255, 253, 253);
+      cursor: pointer;
+      display: block;
+      font-size: 45px;
+      &:hover {
+        color: rgb(1, 193, 252);
       }
     }
   }

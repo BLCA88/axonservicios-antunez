@@ -7,17 +7,21 @@
     height: 570px;    
     background-color: white;    
     border-radius: 0% 0% 100% 80%;
+    text-align: center;
     .titulo__presentacion {    
         font-family: $f-mont;
         font-weight: 700;
-        font-size: 180%;
-        margin-top: 20px;
+        font-size: 180%;        
+        margin-top: 40px;
         color: map-get($color, second);    
     }
      .container__imagen--titulo{
         @include flexRowCenter;
         .container__imagen--presentacion {
-            width: 40%;            
+            width: 40%;
+            .img__presentacion {
+                width: 90%
+            }            
         }
     }           
 }

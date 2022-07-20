@@ -11,14 +11,25 @@ header {
     backdrop-filter: blur(20px);    
     position: sticky;
     box-shadow: 1px 1px 5px 1px rgba(46, 44, 44, 0.295);
-    z-index: 1000;                             
+    z-index: 1000;                                
 }
 
 /*---------------<REGLAS GENERALES>---------------*/
 a {    
     color: rgb(7, 6, 83);
     text-decoration: none;
+    @include size (xsmall); @include size (small) {
+        color: black;
+        font-size: 25px;
+        margin: 20px 0 5px 0;
+    }
+    &:hover {
+        @include size (xsmall); @include size (small) {
+            color:aquamarine
+        }
+    }
 }
+
 strong {
     font-style: italic;
 }
