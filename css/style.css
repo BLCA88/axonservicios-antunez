@@ -1483,6 +1483,7 @@ footer {
 @media (max-width: 400px) {
   .presentacion {
     border-radius: 0% 0% 30% 30%;
+    height: 400px;
   }
 }
 @media (min-width: 401px) and (max-width: 600px) {
@@ -1589,7 +1590,7 @@ footer {
 }
 @media (max-width: 400px) {
   .presentacion .container__parrafo--presentacion {
-    width: 90%;
+    width: 100%;
   }
 }
 @media (min-width: 401px) and (max-width: 600px) {
@@ -1611,7 +1612,7 @@ footer {
 }
 @media (max-width: 400px) {
   .presentacion .container__parrafo--presentacion .parrafo__presentacion {
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 10px;
   }
 }
@@ -1778,7 +1779,7 @@ footer {
     order: 2;
     overflow: hidden;
     height: 70%;
-    width: 80%;
+    width: 60%;
     margin: 30px;
   }
 }
