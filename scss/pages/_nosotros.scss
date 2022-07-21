@@ -3,12 +3,42 @@
     grid-area: s1;       
     width: 400px;
     height: 300px;
+    @include size (xsmall) {
+        margin-bottom: 40px;
+    }
+    @include size (small) {
+        margin-bottom: 40px;
+    }
+    @include size (medium) {
+        margin-bottom: 40px;
+    }
     .section__n--img  {
         width: 190px;
         height: 220px;
         border-radius: 300px;
         padding-bottom: 30px;
-        margin-top: 20px;   
+        margin-top: 20px;
+        @include size (xsmall) {
+            margin-top: 30px;
+        }
+        @include size (small) {
+            margin-top: 30px;
+        }
+        @include size (medium) {
+            margin-top: 30px;
+        }
+        @include size (large) {
+            margin-top: 30px;
+            width: 160px;
+            height: 180px;
+            border-radius: 100%;
+        }
+        @include size (xlarge) {
+            margin-top: 30px;
+            width: 160px;
+            height: 180px;
+            border-radius: 100%;
+        }     
     }
     .section__n--h2 {
         color: white;    
@@ -19,21 +49,81 @@
         font-size: 130%;
         width: 350px;
         height: 40px;
-        margin-top: 10px;     
+        margin-top: 10px;
+        @include size (xsmall) {
+            font-size: 110%;
+        }
+        @include size (small) {
+            font-size: 110%;
+        }
+        @include size (medium) {
+            font-size: 110%;
+        }
+        @include size (large) {
+            font-size: 110%;
+        }
+        @include size (xlarge) {
+            font-size: 110%;
+        }      
     }            
 }
 .section__2 {   
     @extend .section__1;
-    grid-area: s2;  
+    grid-area: s2;
+    @include size (xsmall) {
+        margin-bottom: 100px;
+    }
+    @include size (small) {
+        margin-bottom: 100px;
+    }
+    @include size (medium) {
+        margin-bottom: 100px;
+    }
+    @include size (large) {
+        margin-top: 1px;
+    }
+    @include size (xlarge) {
+        margin-top: 1px;
+    }     
 }
 .section__3 {
     @extend .section__1;    
     grid-area: s3;
+    @include size (xsmall) {
+        margin-bottom: 100px;
+    }
+    @include size (small) {
+        margin-bottom: 100px;
+    }
+    @include size (medium) {
+        margin-bottom: 100px;
+    }
+    @include size (large) {
+        margin-bottom: 130px;
+    }
+    @include size (xlarge) {
+        margin-bottom: 130px;
+    }  
 }    
 .section__4 { 
     @extend .section__1;
     grid-area: s4;    
-    margin-bottom: 130px;    
+    margin-bottom: 130px;
+    @include size (xsmall) {
+        margin-bottom: 150px;
+    }
+    @include size (small) {
+        margin-bottom: 150px;
+    }
+    @include size (medium) {
+        margin-bottom: 150px;
+    }
+    @include size (large) {
+        margin-bottom: 140px;
+    }
+    @include size (xlarge) {
+        margin-bottom: 140px;
+    }       
 }
 .div__logo--a {
     grid-area: logo;    
@@ -43,7 +133,19 @@
     width: 200px;
     height: 200px;        
     align-self: center;
-    animation: logo 1.8s ease-in-out infinite;    
+    animation: logo 1.8s ease-in-out infinite;
+    @include size (xsmall) {
+        display: none;
+    }
+    @include size (small) {
+        display: none;
+    }
+    @include size (medium) {
+        display: none;
+    }
+    @include size (large) {
+        display: none;
+    }     
     .img__a {
         width: 120px;        
     }

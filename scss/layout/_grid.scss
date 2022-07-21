@@ -17,9 +17,30 @@ footer {
     height: 140px;           
     background-color: #f8f8f8;
     @include size (xsmall) {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: "direccion links";
-    }           
+        justify-items: center;
+    }
+    @include size (small) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "direccion links";
+        justify-items: center;
+    }
+    @include size (medium) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "direccion links";
+        justify-items: center;
+    }
+    @include size (large) {
+        grid-template-columns: 1fr .5fr 1fr;
+        grid-template-areas: "direccion links iframe";
+        justify-items: center;
+    }
+    @include size (xlarge) {
+        grid-template-columns: 1fr .3fr 1fr;
+        grid-template-areas: "direccion links iframe";
+        justify-items: center;
+    }             
 }
 
 
@@ -28,24 +49,20 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto auto;
-    grid-template-areas: "present" "servicios" "because";
+    grid-template-areas: "present" "servicios" "because" "work";
     justify-items: center;
     @include size(xsmall) {
-        grid-template-rows: auto auto auto 200px;
-        row-gap: 20px;
+        grid-template-rows: auto auto auto auto;        
     }
     @include size(small) {
-        grid-template-rows: auto auto auto 200px;
-        row-gap: 20px;
+        grid-template-rows: auto auto auto auto;        
     }
     @include size(medium) {
-        grid-template-rows: auto auto auto 200px;
-        row-gap: 20px;
+        grid-template-rows: auto auto auto auto;        
     }
     @include size (large) {
-        grid-template-rows: auto auto auto 200px;
-        row-gap: 20px;
-    }              
+        grid-template-rows: 1fr auto auto auto;        
+    }                  
 }
 
 /* --------<MAIN NOSOTROS>-------- */
@@ -59,36 +76,59 @@ footer {
     justify-items: center;    
     align-content: flex-start;              
     background-color: #3757E6;
-    @include size(xsmall); @include size(small); @include size(medium) {
-        grid-template-columns: 100vw;
+    @include size(xsmall) {
+        grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
         grid-template-areas: "s1" "s2" "s3" "s4";
-    };     
-    @include size (large); @include size (xlarge) {
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
+    }
+    @include size(small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "s1" "s2" "s3" "s4";
+    }
+    @include size(medium){
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "s1" "s2" "s3" "s4";
+    } 
+    @include size (large) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-template-areas: "s1 s2" "s3 s4";
-    };    
+    }
+    @include size (xlarge) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 200px 1fr;
+        grid-template-areas: "s1 s2" "logo logo" "s3 s4";;
+    }   
 }
 
 /* --------<MAIN SERVICIOS>-------- */
 .main__servicios {
     display: grid;    
     grid-template-columns: 1fr;
-    grid-template-rows: .7fr repeat(6, 1fr);
-    justify-items: center;
-    row-gap: 40px;
-    grid-template-areas: "section" "section1" "section2" "section3" "section4" "section5" "section6";
+    grid-template-rows: repeat(7, 1fr);    
+    row-gap: 50px;
+    grid-template-areas: "section""section1""section2""section3""section4""section5""section6";
     background-color: #3757E6;
-    @include size(xsmall); @include size(small); @include size(medium) {
-        grid-template-rows: 1px 400px 370px 360px 1px;
-    };     
+    @include size (xsmall) {
+        grid-template-rows: 1fr repeat(6, 1fr);
+        row-gap: 20px;        
+    }
+    @include size(small) {
+        grid-template-rows: .8fr repeat(6, 1fr);
+        row-gap: 20px; 
+    }
+    @include size(medium) {
+        grid-template-rows: .8fr repeat(6, 1fr);
+        row-gap: 20px; 
+    }     
     @include size (large) {
-        grid-template-rows: 1px 500px 500px 500px 1px;
-    };
+        grid-template-rows: repeat(7, 1fr) 50px;
+    }
     @include size (xlarge) {
-        grid-template-rows: 1px 800px 650px 700px 1px;
-    };      
+        
+    }      
 }
 
 /* --------<MAIN CLIENTES>-------- */
@@ -99,28 +139,16 @@ footer {
     grid-template-areas: "titulo" "slider" "carrusel";
     justify-items: center;
     align-items: center;                      
-    background-color: #3757E6;         
+    background-color: #3757E6;    
+               
 }
 
 /*--------<MAIN CONTACTO>--------*/
 .main__contacto {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-template-rows: 1fr .5fr 100px;              
-    grid-template-areas: "div" "iframe";      
-    background-color: #3757E6;
-    @include size(xsmall); @include size(small); @include size(medium) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr .5fr 50px ;
-    };    
-    @include size (large) {
-        grid-template-columns:10px 1fr 1fr 10px;
-        grid-template-rows: 1fr;
-        grid-template-areas: ". div iframe .";
-        column-gap: 20px;
-    };
-    @include size (xlarge) {
-        grid-template-rows: 1fr .5fr 50px;        
-        column-gap: 25px;
-    }; 
+    grid-template-areas: "div" "iframe";
+    justify-items: center;      
+    background-color: #3757E6;    
 }
