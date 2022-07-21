@@ -107,7 +107,7 @@ footer {
 .main__servicios {
     display: grid;    
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 1fr);    
+    grid-template-rows: repeat(7, 1fr) 100px;    
     row-gap: 50px;
     grid-template-areas: "section""section1""section2""section3""section4""section5""section6";
     background-color: #3757E6;
