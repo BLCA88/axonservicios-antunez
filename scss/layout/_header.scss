@@ -1,15 +1,12 @@
 .header__div--img{
     display: flex; 
-    align-items: center;   
-    margin-top: 15px;    
+    align-items: center;      
     margin-left: 160px;
     @include size (xsmall) {
-        margin-left: 30px;
-        margin-top: 0px;
+        margin-left: 30px;        
     }
     @include size (small){
-        margin-left: 30px;
-        margin-top: 0px;
+        margin-left: 30px;        
     }
     @include size (medium) {
         margin-left: 30px;
@@ -18,14 +15,15 @@
         margin-left: 30px;
     }
     @include size (xlarge) {
-        margin-left: 30px;
+        margin-left: 80px;        
     }           
 }
 
-.header__div--h1 {
+.header__div--h2 {
     font-weight: 300;     
     color: rgb(7, 6, 83);       
     font-size: large;
+    font-weight: 500;
     @include size (xsmall)  {        
         display: none;
     }
@@ -37,7 +35,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;        
-        font-size: 16px;         
+        font-size: 14px;         
     }
     @include size (large) {
         width: 100px;
@@ -47,11 +45,11 @@
         font-size: 17px;         
     }
     @include size (xlarge) {
-        width: 100px;
+        width: 13rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;        
-        font-size: 17px;         
+        font-size: 18px;                 
     }              
 }
 

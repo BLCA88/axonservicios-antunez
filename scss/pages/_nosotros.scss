@@ -5,6 +5,7 @@
     height: 300px;
     @include size (xsmall) {
         margin-bottom: 40px;
+        width: auto;
     }
     @include size (small) {
         margin-bottom: 40px;

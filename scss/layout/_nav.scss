@@ -1,5 +1,5 @@
 .header__div--nav {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;                 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;                     
 }
 
 .nav__check{
@@ -21,8 +21,9 @@
 .nav__ul { 
     display: flex;
     flex-wrap: nowrap;   
-    list-style: none; 
-    margin-right: 90px;
+    list-style: none;
+    margin-top: 20px;
+    margin-right: 30px;   
     @include size (xsmall) {
         height: 300px;
         width: 100%;        
@@ -53,45 +54,32 @@
         margin-top: 5px;
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
         transition: clip-path 0.2s ease-in-out; 
-    }
-    @include size (medium) {
-        margin-left: 200px;
-        margin-top: 20px;
-    }
-    @include size (large) {
-        margin-left: 200px;
-        margin-top: 20px;
-    }
-    @include size (xlarge) {
-        margin-right: 20px;
-    }         
+    }              
 }
 
 .nav__li {    
-    display: inline-block; 
-    font-size: large;
-    margin-right: 10px;          
-    padding: 0px 10px 0px 10px;
-    @include size (xsmall) {
-        display: flex;        
+    display: flex; 
+    font-size: large;              
+    padding: 0px 7px 0px 7px;
+    margin-right: 20px;
+    @include size (xsmall) {                
         justify-content: space-between;        
         padding: 10px;
         margin-top: 15px;
         font-size: 17px;        
     }
-    @include size (small) {
-        display: flex;
-        justify-content: space-between;
+    @include size (small) {               
+        justify-content: space-between;        
+        padding: 10px;
+        margin-top: 15px;
         font-size: 17px;                
     }
-    @include size (medium) {
-        padding: 0px 7px 0px 7px;
+    @include size (medium) {        
+        font-size: 15px;
+        margin-right: 10px;       
     }
-    
-    @include size (xlarge) {
-        display: flex;
-        margin-right: 0px;
-    }                  
+        
+                      
 }
 .menu__burguer{
     @include size (xsmall) {

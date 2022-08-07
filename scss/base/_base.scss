@@ -17,14 +17,12 @@ header {
 /*---------------<REGLAS GENERALES>---------------*/
 a {    
     color: rgb(7, 6, 83);
-    text-decoration: none;
-    @include size (xsmall); @include size (small) {
-        color: black;
-        font-size: 25px;
-        margin: 20px 0 5px 0;
-    }
+    text-decoration: none;    
     &:hover {
-        @include size (xsmall); @include size (small) {
+        @include size (xsmall) {
+            color:aquamarine;
+        }
+        @include size (small) {
             color:aquamarine
         }
     }

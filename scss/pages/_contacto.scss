@@ -133,7 +133,7 @@
     grid-area: iframe;   
     width: 100%;
     @include size (xsmall) {
-        width: 300px;       
+        width: 300px;               
     }
     @include size (small) {
         width: 400px;       
